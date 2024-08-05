@@ -1,6 +1,6 @@
 import 'bulma/css/bulma.min.css';
 import React, { useState } from 'react'
-import axios from 'axios';
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Register = () => {
@@ -13,6 +13,7 @@ const Register = () => {
 
     const handleRegister = async(e) => {
         e.preventDefault();
+        console.log("Register button clicked"); 
         try {
             await axios.post('http://localhost:5000/users', {
                 name: name,
